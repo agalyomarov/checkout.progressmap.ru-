@@ -12,7 +12,8 @@ const SHOPID = 924450;
 const API_KEY = "live_qBYd6dXkNf7PfyU9VNaSHv7-VzJzMfmTo8jy2qy7rbE";
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-$mysqli = new mysqli("localhost", "u1723962_default", "hE8E3El0EeBwtkl5Fc05", "u1723962_default");
+// $mysqli = new mysqli("localhost", "u1723962_default", "hE8E3El0EeBwtkl5Fc05", "u1723962_default");
+$mysqli = new mysqli("localhost", "agaly", "1122", "map");
 
 $payment = new Client;
 $payment->setAuth(SHOPID, API_KEY);
@@ -32,6 +33,7 @@ foreach ($orders as $order) {
          array(
             'amount' => array(
                'value' => SUMMA,
+               // 'value' => 1,
                'currency' => 'RUB',
             ),
          ),

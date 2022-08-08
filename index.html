@@ -3,6 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./Checkout - Virtue Map_files/330502802083834" async=""></script>
     <script async="" src="./Checkout - Virtue Map_files/fbevents.js"></script>
     <script type="text/javascript" async="" src="./Checkout - Virtue Map_files/analytics.js"></script>
@@ -23,7 +24,26 @@
             document.head.appendChild(script);
         }
     </script>
-    <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(89682228, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/89682228" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(89682228, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/89682228" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <!-- Google Tag Manager for WordPress by gtm4wp.com -->
     <script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
@@ -3747,14 +3767,34 @@
                                             <div class="elementor-element elementor-element-132d1ef6 wfacp_modal_open elementor-align-center elementor-widget elementor-widget-wc-add-to-cart" data-id="132d1ef6" data-element_type="widget" data-widget_type="wc-add-to-cart.default">
                                                 <div class="elementor-widget-container">
                                                     <div class="elementor-button-wrapper">
-                                                        <a href="app/oplata.php" onclick="ym(89682228, 'reachGoal', 'checkout'); return true;" data-quantity="1" data-product_id="684" class="product_type_simple add_to_cart_button ajax_add_to_cart
+                                                        <a href="javascript:void()" onclick="ym(89682228, 'reachGoal', 'checkout'); return true;" data-quantity="1" data-product_id="684" class="product_type_simple add_to_cart_button ajax_add_to_cart
 																elementor-button elementor-size-sm" role="button" id="ProB">
                                                             <span class="elementor-button-content-wrapper">
                                                                 <span id="btn_for_oplata_1" class="elementor-button-text" onclick="ym(89682228, 'reachGoal', 'checkout'); return true;">ПОЛУЧИТЬ МОЙ ПЛАН (СКИДКА 50%)</span>
                                                             </span>
                                                             <script>
-                                                                document.querySelector('#btn_for_oplata_1').addEventListener('click', function (event) {
-                                                                    window.location.href = 'app/oplata.php';
+                                                                document.querySelector('#btn_for_oplata_1').addEventListener('click', async function (event) {
+                                                                    //     window.location.href = 'app/oplata.php';
+                                                                    const {
+                                                                        value: formValues
+                                                                    } = await Swal.fire({
+                                                                        width: "500px",
+                                                                        title: '',
+                                                                        html: 'Имя <input id="name" class="swal2-input" placeholder="Введите имя"><br>' +
+                                                                            'Email <input id="email" class="swal2-input" placeholder="Введите email">',
+                                                                        focusConfirm: false,
+                                                                        confirmButtonText: 'Оплатить',
+                                                                        preConfirm: () => {
+                                                                            return [
+                                                                                document.getElementById('name').value,
+                                                                                document.getElementById('email').value
+                                                                            ]
+                                                                        }
+                                                                    })
+
+                                                                    if (formValues[0] && formValues[1]) {
+                                                                        window.location.href = `app/oplata.php?name=${formValues[0]}&email=${formValues[1]}`;
+                                                                    }
                                                                 });
                                                             </script>
                                                         </a>
@@ -4730,13 +4770,33 @@
                                             <div class="elementor-element elementor-element-514feefe wfacp_modal_open elementor-align-center elementor-widget elementor-widget-wc-add-to-cart" data-id="514feefe" data-element_type="widget" data-widget_type="wc-add-to-cart.default">
                                                 <div class="elementor-widget-container">
                                                     <div class="elementor-button-wrapper">
-                                                        <a href="app/oplata.php" onclick="ym(89682228, 'reachGoal', 'checkout'); return true;" data-quantity="1" data-product_id="684" class="product_type_simple add_to_cart_button ajax_add_to_cart
+                                                        <a href="javascript:void()" onclick="ym(89682228, 'reachGoal', 'checkout'); return true;" data-quantity="1" data-product_id="684" class="product_type_simple add_to_cart_button ajax_add_to_cart
 																elementor-button elementor-size-sm" role="button" id="ProD">
                                                             <span class="elementor-button-content-wrapper">
                                                                 <span id="btn_for_oplata_2" class="elementor-button-text" onclick="ym(89682228, 'reachGoal', 'checkout'); return true;">ПОЛУЧИТЬ МОЙ ПЛАН (СКИДКА 50%) </span>
                                                                 <script>
-                                                                    document.querySelector('#btn_for_oplata_2').addEventListener('click', function (event) {
-                                                                        window.location.href = 'app/oplata.php';
+                                                                    document.querySelector('#btn_for_oplata_2').addEventListener('click', async function (event) {
+                                                                        //     window.location.href = 'app/oplata.php';
+                                                                        const {
+                                                                            value: formValues
+                                                                        } = await Swal.fire({
+                                                                            width: "500px",
+                                                                            title: '',
+                                                                            html: 'Имя <input id="name" class="swal2-input" placeholder="Введите имя"><br>' +
+                                                                                'Email <input id="email" class="swal2-input" placeholder="Введите email">',
+                                                                            focusConfirm: false,
+                                                                            confirmButtonText: 'Оплатить',
+                                                                            preConfirm: () => {
+                                                                                return [
+                                                                                    document.getElementById('name').value,
+                                                                                    document.getElementById('email').value
+                                                                                ]
+                                                                            }
+                                                                        })
+
+                                                                        if (formValues[0] && formValues[1]) {
+                                                                            window.location.href = `app/oplata.php?name=${formValues[0]}&email=${formValues[1]}`;
+                                                                        }
                                                                     });
                                                                 </script>
                                                             </span>

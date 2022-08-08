@@ -1,0 +1,39 @@
+[08-Aug-2022 21:25:43 UTC] PHP Warning:  Attempt to read property "email" on array in /Users/agaly/Downloads/s/app/mail.php on line 41
+[08-Aug-2022 21:25:43 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: Invalid address:  (to):  in /Users/agaly/Downloads/s/vendor/phpmailer/phpmailer/src/PHPMailer.php:1094
+Stack trace:
+#0 /Users/agaly/Downloads/s/vendor/phpmailer/phpmailer/src/PHPMailer.php(1014): PHPMailer\PHPMailer\PHPMailer->addOrEnqueueAnAddress('to', NULL, '')
+#1 /Users/agaly/Downloads/s/app/mail.php(41): PHPMailer\PHPMailer\PHPMailer->addAddress(NULL, '')
+#2 {main}
+  thrown in /Users/agaly/Downloads/s/vendor/phpmailer/phpmailer/src/PHPMailer.php on line 1094
+[08-Aug-2022 21:26:06 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: Message body empty in /Users/agaly/Downloads/s/vendor/phpmailer/phpmailer/src/PHPMailer.php:1588
+Stack trace:
+#0 /Users/agaly/Downloads/s/vendor/phpmailer/phpmailer/src/PHPMailer.php(1496): PHPMailer\PHPMailer\PHPMailer->preSend()
+#1 /Users/agaly/Downloads/s/app/mail.php(42): PHPMailer\PHPMailer\PHPMailer->send()
+#2 {main}
+  thrown in /Users/agaly/Downloads/s/vendor/phpmailer/phpmailer/src/PHPMailer.php on line 1588
+[08-Aug-2022 21:46:19 UTC] PHP Warning:  Undefined variable $mail_to in /Users/agaly/Downloads/s/app/mail.php on line 34
+[08-Aug-2022 21:46:19 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: Invalid address:  (to):  in /Users/agaly/Downloads/s/vendor/phpmailer/phpmailer/src/PHPMailer.php:1094
+Stack trace:
+#0 /Users/agaly/Downloads/s/vendor/phpmailer/phpmailer/src/PHPMailer.php(1014): PHPMailer\PHPMailer\PHPMailer->addOrEnqueueAnAddress('to', NULL, '')
+#1 /Users/agaly/Downloads/s/app/mail.php(34): PHPMailer\PHPMailer\PHPMailer->addAddress(NULL, '')
+#2 {main}
+  thrown in /Users/agaly/Downloads/s/vendor/phpmailer/phpmailer/src/PHPMailer.php on line 1094
+[08-Aug-2022 21:46:47 UTC] PHP Warning:  Undefined variable $mail_to in /Users/agaly/Downloads/s/app/mail.php on line 35
+[08-Aug-2022 21:46:47 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: Invalid address:  (to):  in /Users/agaly/Downloads/s/vendor/phpmailer/phpmailer/src/PHPMailer.php:1094
+Stack trace:
+#0 /Users/agaly/Downloads/s/vendor/phpmailer/phpmailer/src/PHPMailer.php(1014): PHPMailer\PHPMailer\PHPMailer->addOrEnqueueAnAddress('to', NULL, '')
+#1 /Users/agaly/Downloads/s/app/mail.php(35): PHPMailer\PHPMailer\PHPMailer->addAddress(NULL, '')
+#2 {main}
+  thrown in /Users/agaly/Downloads/s/vendor/phpmailer/phpmailer/src/PHPMailer.php on line 1094
+[08-Aug-2022 21:47:19 UTC] PHP Warning:  Array to string conversion in /Users/agaly/Downloads/s/app/mail.php on line 41
+[08-Aug-2022 21:47:19 UTC] PHP Warning:  Undefined variable $Array in /Users/agaly/Downloads/s/app/mail.php on line 41
+[08-Aug-2022 21:47:19 UTC] PHP Warning:  Attempt to read property "mail" on null in /Users/agaly/Downloads/s/app/mail.php on line 41
+[08-Aug-2022 21:47:26 UTC] PHP Warning:  Attempt to read property "mail" on array in /Users/agaly/Downloads/s/app/mail.php on line 41
+[08-Aug-2022 21:48:20 UTC] PHP Warning:  Attempt to read property "mail" on array in /Users/agaly/Downloads/s/app/mail.php on line 41
+[08-Aug-2022 21:50:05 UTC] PHP Warning:  Attempt to read property "email" on array in /Users/agaly/Downloads/s/app/mail.php on line 41
+[08-Aug-2022 21:52:31 UTC] PHP Warning:  Attempt to read property "id" on array in /Users/agaly/Downloads/s/app/mail.php on line 43
+[08-Aug-2022 21:56:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ','sended'=false' at line 1 in /Users/agaly/Downloads/s/app/mail.php:17
+Stack trace:
+#0 /Users/agaly/Downloads/s/app/mail.php(17): mysqli->query('SELECT * FROM  ...')
+#1 {main}
+  thrown in /Users/agaly/Downloads/s/app/mail.php on line 17
