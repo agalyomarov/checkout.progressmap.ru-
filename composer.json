@@ -1,0 +1,15 @@
+{
+    "name": "agaly/test",
+    "require": {
+        "yoomoney/yookassa-sdk-php": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "\\": "./"
+        }
+    },
+    "authors": [{
+        "name": "Agaly Omarov",
+        "email": "97389793+agalyomarov@users.noreply.github.com"
+    }]
+}
