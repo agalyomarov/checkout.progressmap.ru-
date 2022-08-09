@@ -10,6 +10,7 @@ use PHPMailer\PHPMailer\Exception;
 
 $subject = 'Вы успешно оплатили';
 $file = 'https://www.checkout.progressmap.ru/ProgressMap.pdf';
+$text = "<a href='$file'>Нажмите суда для скачивание</a>";
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 // $mysqli = new mysqli("localhost", "u1723962_default", "hE8E3El0EeBwtkl5Fc05", "u1723962_default");
 $mysqli = new mysqli("localhost", "agaly", "1122", "map");
@@ -34,7 +35,7 @@ $mail->From = "admin@checkout.progressmap.ru";
 $mail->FromName = "";
 $mail->isHTML(true);
 $mail->Subject = $subject;
-$mail->Body = "<a href='$file'>Нажмите суда для скачивание</a>";
+$mail->Body = $text;
 $mail->CharSet = PHPMailer::CHARSET_UTF8;
 try {
    foreach ($orders as $order) {
